@@ -1,0 +1,216 @@
+.page {
+
+    &__main-block {}
+}
+
+.main-block {
+
+    &__body {}
+
+    &__content-box {
+        position: relative;
+        right: -50px;
+        z-index: 4;
+        max-width: 621px;
+    }
+
+    &__title {
+
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 79 / 52 * 100%;
+        letter-spacing: .8px;
+
+        &:not(:last-child) {
+            margin: 0px 0px 25px 0px;
+        }
+    }
+
+    &__text {
+        @extend %tplText;
+
+
+        &:not(:last-child) {
+            margin: 0px 0px 42px 0px;
+        }
+    }
+
+    &__image {
+        max-width: 571px;
+
+
+    }
+
+
+    &__input {
+        max-width: 459px;
+        background-color: $WhiteColor;
+        color: $GreyColor;
+        box-shadow: 0px 17px 42px rgba(0, 0, 0, 0.12);
+        border-radius: 29px 0px 0px 29px;
+        padding: 18px 0px 16px 20px;
+        transition: all .5s ease;
+
+        &:focus {
+            box-shadow: 0px 17px 42px $OrangeColor;
+        }
+    }
+
+    &__button {
+        background-color: $OrangeColor;
+        padding: 18px 37px 16px 37px;
+        color: $WhiteColor;
+        font-weight: 700;
+        line-height: 24 / 16 * 100%;
+        border-radius: 0px 29px 29px 0px;
+        min-height: 59px;
+        margin: 0px 0px 0px -5px;
+
+    }
+
+    @media (min-width:892px) {
+        &__body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        &__text {
+            max-width: 467px;
+        }
+
+        &__image img {
+            border-radius: 40px 40px 40px 0px;
+        }
+    }
+
+    @media (max-width:1024px) {
+        &__content-box {
+            position: relative;
+            right: -100px;
+        }
+
+        &__title {
+            max-width: 610px;
+            font-size: 40px;
+
+            &:not(:last-child) {
+                margin: 0px 0px 20px 0px;
+            }
+        }
+
+        &__text {
+            font-size: 14px;
+
+            &:not(:last-child) {
+                margin: 0px 0px 30px 0px;
+            }
+        }
+
+        &__input {
+            max-width: 430px;
+            padding: 15px 0px 13px 17px;
+            font-size: 15px
+        }
+
+        &__button {
+            min-height: 51px;
+            font-size: 15px;
+            padding: 14px 33px 12px 33px;
+        }
+    }
+
+    @media (max-width:992px) {
+        &__content-box {
+            right: 0px;
+        }
+
+        &__title {
+            font-size: 35px;
+
+            &:not(:last-child) {
+                margin: 0px 0px 15px 0px;
+            }
+        }
+
+        &__text {
+            font-size: 12px;
+
+            &:not(:last-child) {
+                margin: 0px 0px 20px 0px;
+            }
+        }
+
+        &__input {
+            font-size: 12px;
+            max-width: 410px;
+            padding: 10px 0px 8px 12px;
+        }
+
+        &__button {
+            min-height: 36px;
+            padding: 10px 29px 5px 29px;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width:892px) {
+        &__body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__content-box {
+            margin: 40px 0px 40px 0px;
+        }
+
+        &__title {
+            font-size: 20px;
+
+        }
+
+        &__text {
+            &:not(:last-child) {
+                margin: 0px 0px 15px 0px;
+            }
+        }
+
+        &__input {
+            max-width: 410px;
+            padding: 10px 0px 8px 12px;
+        }
+
+        &__button {
+            min-height: 31px;
+            padding: 8px 27px 3px 27px;
+        }
+
+    }
+
+    @media (max-width:660px) {
+        &__title {
+            font-size: 20px;
+        }
+
+        &__text {
+            font-size: 10px;
+
+            &:not(:last-child) {
+                margin: 0px 0px 15px 0px;
+            }
+        }
+
+        &__input {
+            font-size: 11px;
+            max-width: 400px;
+            padding: 8px 0px 6px 10px;
+        }
+
+        &__button {}
+
+    }
+}

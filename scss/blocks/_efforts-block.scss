@@ -1,0 +1,207 @@
+.page {
+
+    &__eforts-block {}
+}
+
+.eforts-block {
+
+    &__conteiner {}
+
+    &__body {}
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__images-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 180px 0px 0px;
+
+        &>*:not(:last-child) {
+            padding: 0px 32.8px 0px 0px;
+        }
+    }
+
+    &__image {
+        &:first-child {
+            margin: 0px 0px 0px -180px;
+        }
+
+        &:first-child img {
+            border-radius: 0px 20px 20px 0px;
+        }
+
+        & img {
+            border-radius: 20px 20px 0px 20px;
+
+        }
+    }
+
+    &__content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: 374px;
+        padding: 0px 5px;
+    }
+
+    &__title {
+        @extend %tplH2Title;
+
+        &:not(:last-child) {
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    &__text-info {
+        &>*:not(:last-child) {
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    &__text {
+        @extend %tplText;
+    }
+
+    &__link {
+        margin: 40px 0px 0px 0px;
+
+        & a {
+            @include LinksTypeStyle(18px, 39px, 16px, 39px);
+
+            &:hover {
+                color: $OrangeColor;
+                background-color: $WhiteColor;
+                border-color: $OrangeColor;
+            }
+        }
+    }
+
+    @media (max-width:1024px) {
+        &__images-block {
+            margin: 0px 150px 0px 0px;
+
+            &>*:not(:last-child) {
+                padding: 0px 30px 0px 0px;
+            }
+        }
+
+        &__title {
+            font-size: 30px;
+
+            &:not(:last-child) {
+                margin: 0px 0px 15px 0px;
+            }
+        }
+
+        &__text {
+            font-size: 12px;
+
+        }
+
+        &__link {
+            margin: 35px 0px 0px 0px;
+
+            & a {
+                @include LinksTypeStyle(15px, 36px, 13px, 36px);
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width:992px) {
+        &__images-block {
+            margin: 0px 100px 0px 0px;
+
+            &>*:not(:last-child) {
+                padding: 0px 18px 0px 0px;
+            }
+        }
+
+        &__content-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 374px;
+            padding: 0px 5px;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 25px;
+
+            &:not(:last-child) {
+                margin: 0px 0px 10px 0px;
+            }
+        }
+
+        &__text {
+            font-size: 10px;
+        }
+
+        &__link {
+            margin: 30px 0px 0px 0px;
+
+            & a {
+                @include LinksTypeStyle(13px, 34px, 11px, 34px);
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 892px) {
+        &__row {
+            flex-direction: column-reverse;
+        }
+
+        &__images-block {
+            margin: 50px 0px 0px 0px;
+
+            &>*:not(:last-child) {
+                padding: 0px 20px 0px 0px;
+            }
+        }
+
+        &__image {
+            &:first-child {
+                margin: 0px 0px 0px 0px;
+            }
+
+            &:first-child img {
+                border-radius: 0px 0px 0px 0px;
+            }
+
+            & img {
+                border-radius: 0px 0px 0px 0px;
+
+            }
+        }
+
+        &__content-box {
+            margin: 50px 0px 0px 0px;
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__text {
+            font-size: 10px;
+        }
+
+        &__link {
+            margin: 20px 0px 0px 0px;
+
+            & a {
+                @include LinksTypeStyle(10px, 32px, 9px, 32px);
+                font-size: 12px;
+            }
+        }
+    }
+}

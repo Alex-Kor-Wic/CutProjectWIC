@@ -1,0 +1,169 @@
+.page {
+
+    &__use-product {
+        margin: 144px 0px 154px 0px;
+    }
+
+    @media (max-width: 1024px) {
+        &__use-product {
+            margin: 124px 0px 134px 0px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        &__use-product {
+            margin: 115px 0px 125px 0px;
+        }
+    }
+
+    @media (max-width:768px) {
+        &__use-product {
+            margin: 105px 0px 115px 0px;
+        }
+    }
+}
+
+.use-product {
+
+
+    &__body {
+        background-color: $TiffanyColor;
+        border-radius: 20px;
+        padding: 59px 94px 16px 7px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__circle-1 {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__image {
+        & img {
+            // max-width: 548px;
+            border-radius: 21px;
+        }
+    }
+
+    &__content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: 364px;
+        z-index: 10;
+    }
+
+    &__title {
+        @extend %tplH2Title;
+        color: $WhiteColor;
+
+        &:not(:last-child) {
+            margin: 0px 0px 15px 0px;
+        }
+    }
+
+    &__text {
+        @extend %tplText;
+        color: $WhiteColor;
+    }
+
+    &__link a {
+        @include LinksTypeStyle(18px, 40px, 16px, 41px);
+        margin: 30px 0px 0px 0px;
+
+        &:hover {
+            color: $OrangeColor;
+            background-color: $WhiteColor;
+            border-color: $OrangeColor;
+        }
+    }
+
+    &__circle-2 {
+        position: absolute;
+        bottom: 0px;
+        left: 400px;
+
+    }
+
+    @media (max-width: 1024px) {
+        &__body {
+            padding: 57px 92px 14px 5px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__text {
+            font-size: 12px;
+        }
+
+        &__link a {
+            @include LinksTypeStyle(15px, 37px, 13px, 38px);
+            font-size: 14px;
+            margin: 25px 0px 0px 0px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        &__body {
+            padding: 54px 89px 11px 2px;
+        }
+
+        &__title {
+            font-size: 25px;
+
+            &:not(:last-child) {
+                margin: 0px 0px 10px 0px;
+            }
+        }
+
+        &__text {
+            font-size: 10px;
+        }
+
+        &__link a {
+            @include LinksTypeStyle(13px, 35px, 11px, 36px);
+            font-size: 12px;
+            margin: 20px 0px 0px 0px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__body {
+            padding: 48px 0px;
+        }
+
+        &__row {
+            flex-direction: column-reverse;
+        }
+
+        &__content-box {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__title {
+            &:not(:last-child) {
+                margin: 0px 0px 10px 0px;
+            }
+        }
+
+        &__link a {
+            @include LinksTypeStyle(11px, 33px, 9px, 34px);
+            margin: 15px 0px 0px 0px;
+        }
+    }
+}

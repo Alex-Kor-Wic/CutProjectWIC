@@ -1,0 +1,42 @@
+//Color-Standarts
+$DefaultColor: #323232;
+$WhiteColor: #ffffff;
+$OrangeColor: #F78434;
+$TiffanyColor: #58BEBF;
+$GreyColor: #606060;
+
+//Sixe-Standart
+$MaxWidthConteiner: 1109px;
+
+//Text-Standart
+%tplH2Title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 62 / 42 * 100%;
+    letter-spacing: .8px;
+}
+
+%tplText {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27 / 16 * 100%;
+    letter-spacing: 1.15px;
+}
+
+//Links-Mixin
+@mixin LinksTypeStyle($p1, $p2, $p3, $p4) {
+    max-height: 58px;
+    color: $WhiteColor;
+    background-color: $OrangeColor;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24 / 16 * 100%;
+    padding: $p1 $p2 $p3 $p4;
+    border-radius: 29px;
+    transition: all .5s ease;
+    border: 3px solid rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

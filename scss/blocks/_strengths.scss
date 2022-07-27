@@ -1,0 +1,158 @@
+.page {
+
+    &__strengths {
+        margin: 0px 0px 171px 0px;
+    }
+
+    @media (max-width:1024px) {
+        &__strengths {
+            margin: 0px 0px 140px 0px;
+        }
+    }
+
+    @media (max-width:992px) {
+        &__strengths {
+            margin: 0px 0px 120px 0px;
+        }
+    }
+
+    @media (max-width:866px) {
+        &__strengths {
+            margin: 0px 0px 100px 0px;
+        }
+    }
+}
+
+.header-strengths {
+
+    &__title {
+        @extend %tplH2Title;
+        text-align: center;
+
+    }
+
+    @media (max-width:1024px) {
+        &__title {
+            font-size: 30px
+        }
+    }
+
+    @media (max-width:992px) {
+        &__title {
+            font-size: 25px
+        }
+
+    }
+
+    @media (max-width:866px) {
+        &__title {
+            font-size: 20px
+        }
+
+        &__sub-title {
+            font-size: 10px;
+        }
+    }
+}
+
+.strengths {
+
+    &__body {}
+
+    &__header {
+        &:not(:last-child) {
+            margin: 0px 0px 58px 0px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        &:not(:last-child) {
+            padding: 0px 35px 0px 0px;
+        }
+    }
+
+    &__content-box {
+        flex: 0 1 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    &__icon {
+        &:not(:last-child) {
+            margin: 0px 0px 15px 0px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 42 / 28 * 100%;
+        letter-spacing: 0.5px;
+    }
+
+    &__sub-title {
+        @extend %tplText;
+
+        &:not(:last-child) {
+            margin: 2px 0px 0px 0px;
+        }
+    }
+
+    @media (max-width:1024px) {
+        &__row {
+
+            &:not(:last-child) {
+                padding: 0px 35px 0px 0px;
+            }
+        }
+
+        &__header {
+            &:not(:last-child) {
+                margin: 0px 0px 49px 0px;
+            }
+        }
+
+        &__content-box {
+            flex: 1 1 50%;
+
+            &:nth-child(1) {
+                padding: 0px 0px 40px 0px;
+            }
+        }
+
+        &__title {
+            font-size: 25px;
+        }
+
+        &__sub-title {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width:992px) {
+        &__header {
+            &:not(:last-child) {
+                margin: 0px 0px 46px 0px;
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        &__content-box {
+            flex: 1 1 100%;
+
+            &:not(:last-child) {
+                padding: 0px 0px 40px 0px;
+            }
+        }
+    }
+}
